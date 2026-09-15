@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Getting Started | CSSchools</title>
+<meta name="description" content="CSSchools: a friendly, practical CSS tutorial for learning how to style HTML pages.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="topbar"><div class="topbar-inner"><span>CSSchools — Learn CSS without the waffle.</span><span>HTML + CSS • Beginner friendly</span></div></div>
+<header class="site-header"><div class="header-inner">
+<a class="brand" href="index.html">CSSchools <span>/ wiki</span></a>
+<nav class="nav" aria-label="Main navigation"><a href="index.html" class="">Home</a><a href="getting-started.html" class="active">Getting Started</a><a href="selectors.html" class="">Selectors</a><a href="styling.html" class="">Styling</a><a href="box-model.html" class="">Box Model</a><a href="layout.html" class="">Layout</a><a href="responsive.html" class="">Responsive</a><a href="advanced.html" class="">Beyond the Basics</a></nav>
+<div class="search"><label class="small" for="site-search">Find on page</label><input id="site-search" type="search" placeholder="Type a topic..."></div>
+</div></header>
+<div class="layout">
+<aside class="sidebar"><h3>Tutorial</h3><a href="index.html" class="">Home</a><a href="getting-started.html" class="current">Getting Started</a><a href="selectors.html" class="">Selectors</a><a href="styling.html" class="">Styling</a><a href="box-model.html" class="">Box Model</a><a href="layout.html" class="">Layout</a><a href="responsive.html" class="">Responsive</a><a href="advanced.html" class="">Beyond the Basics</a><h3 style="margin-top:1rem">Quick links</h3>
+<a href="https://www.w3schools.com/css/" target="_blank" rel="noopener">W3Schools CSS</a>
+<a href="https://developer.mozilla.org/en-GB/docs/Web/CSS" target="_blank" rel="noopener">MDN CSS</a>
+</aside>
+<main class="content">
+<section class="hero">
+<span class="eyebrow">Chapter 1</span>
+<h1>Getting started with CSS</h1>
+<p class="lead">Before worrying about fancy layouts, get comfortable with the shape of a CSS rule and how it connects to HTML.</p>
+</section>
+<section class="article">
+<div class="toc"><strong>On this page</strong><a href="#what">What CSS does</a><a href="#syntax">CSS syntax</a><a href="#adding">Adding CSS</a><a href="#values">Values and units</a><a href="#comments">Comments</a><a href="#practice">Mini practice</a></div>
+<h2 id="what">What CSS actually does</h2>
+<p>HTML gives your page structure and meaning. CSS describes how that structure should look and how boxes should be arranged. A paragraph is still a paragraph after you style it; CSS simply controls its presentation.</p>
+<h2 id="syntax">CSS syntax</h2>
+<div class="code"><span class="sel">selector</span> {<br>  <span class="prop">property</span>: <span class="val">value</span>;<br>}</div>
+<p>A <strong>selector</strong> chooses one or more elements. A <strong>property</strong> names what you want to change. A <strong>value</strong> says how you want it changed. Each declaration normally ends in a semicolon.</p>
+<h3>Example</h3>
+<div class="code"><span class="sel">h1</span> {<br>  <span class="prop">color</span>: <span class="val">darkgreen</span>;<br>  <span class="prop">font-size</span>: <span class="val">2.4rem</span>;<br>}</div>
+<h2 id="adding">Three common ways to add CSS</h2>
+<table><tr><th>Method</th><th>Example</th><th>When it makes sense</th></tr>
+<tr><td>External</td><td><span class="kbd">styles.css</span> linked from HTML</td><td>Best choice for normal websites because one stylesheet can serve many pages.</td></tr>
+<tr><td>Internal</td><td><span class="kbd">&lt;style&gt;</span> in the head</td><td>Useful for a small one-page experiment or a page-specific demo.</td></tr>
+<tr><td>Inline</td><td><span class="kbd">style="..."</span> on an element</td><td>Useful occasionally, but usually harder to maintain.</td></tr></table>
+<div class="code">&lt;head&gt;<br>  &lt;link rel="stylesheet" href="styles.css"&gt;<br>&lt;/head&gt;</div>
+<h2 id="values">Values and units</h2>
+<p>CSS accepts many kinds of values. Common ones include named colours, numbers, lengths and percentages.</p>
+<table><tr><th>Unit/value</th><th>Typical use</th><th>Example</th></tr>
+<tr><td>px</td><td>Fixed-size detail</td><td><span class="kbd">border: 1px solid</span></td></tr>
+<tr><td>rem</td><td>Text and scalable spacing</td><td><span class="kbd">font-size: 1.2rem</span></td></tr>
+<tr><td>%</td><td>Size relative to a containing context</td><td><span class="kbd">width: 80%</span></td></tr>
+<tr><td>vw / vh</td><td>Relative to viewport size</td><td><span class="kbd">min-height: 70vh</span></td></tr>
+<tr><td>auto</td><td>Let the browser calculate a suitable value</td><td><span class="kbd">margin: 0 auto</span></td></tr></table>
+<h2 id="comments">Comments</h2>
+<p>Comments are ignored by the browser and can help explain why a rule exists.</p>
+<div class="code"><span class="comment">/* This gives the main article a comfortable reading width. */</span><br><span class="sel">.article</span> { <span class="prop">max-width</span>: <span class="val">800px</span>; }</div>
+<h2 id="practice">Mini practice</h2>
+<p>Create a heading and a paragraph. Give the heading a different colour and make the paragraph slightly larger. Then change the paragraph colour without touching the HTML.</p>
+<div class="notice"><strong>Checkpoint:</strong> You are ready for selectors when you can explain the difference between a selector, a property and a value.</div>
+</section>
+</main>
+</div>
+<footer class="footer"><div class="footer-inner">
+<strong>CSSchools</strong> is an independent learning site. The tutorial is original educational material inspired by standard CSS documentation and examples.
+<div class="footer-note">
+Sources and further reading:
+<a href="https://www.w3schools.com/css/" target="_blank" rel="noopener">W3Schools</a>
+<a href="https://developer.mozilla.org/en-GB/docs/Web/CSS" target="_blank" rel="noopener">MDN Web Docs</a>
+<a href="https://www.w3.org/Style/CSS/" target="_blank" rel="noopener">W3C CSS</a>
+</div>
+</div></footer>
+<script src="script.js"></script>
+</body>
+</html>

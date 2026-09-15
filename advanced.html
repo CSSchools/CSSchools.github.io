@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beyond the Basics | CSSchools</title>
+<meta name="description" content="CSSchools: a friendly, practical CSS tutorial for learning how to style HTML pages.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="topbar"><div class="topbar-inner"><span>CSSchools — Learn CSS without the waffle.</span><span>HTML + CSS • Beginner friendly</span></div></div>
+<header class="site-header"><div class="header-inner">
+<a class="brand" href="index.html">CSSchools <span>/ wiki</span></a>
+<nav class="nav" aria-label="Main navigation"><a href="index.html" class="">Home</a><a href="getting-started.html" class="">Getting Started</a><a href="selectors.html" class="">Selectors</a><a href="styling.html" class="">Styling</a><a href="box-model.html" class="">Box Model</a><a href="layout.html" class="">Layout</a><a href="responsive.html" class="">Responsive</a><a href="advanced.html" class="active">Beyond the Basics</a></nav>
+<div class="search"><label class="small" for="site-search">Find on page</label><input id="site-search" type="search" placeholder="Type a topic..."></div>
+</div></header>
+<div class="layout">
+<aside class="sidebar"><h3>Tutorial</h3><a href="index.html" class="">Home</a><a href="getting-started.html" class="">Getting Started</a><a href="selectors.html" class="">Selectors</a><a href="styling.html" class="">Styling</a><a href="box-model.html" class="">Box Model</a><a href="layout.html" class="">Layout</a><a href="responsive.html" class="">Responsive</a><a href="advanced.html" class="current">Beyond the Basics</a><h3 style="margin-top:1rem">Quick links</h3>
+<a href="https://www.w3schools.com/css/" target="_blank" rel="noopener">W3Schools CSS</a>
+<a href="https://developer.mozilla.org/en-GB/docs/Web/CSS" target="_blank" rel="noopener">MDN CSS</a>
+</aside>
+<main class="content">
+<section class="hero"><span class="eyebrow">Chapter 7</span><h1>Beyond the basics</h1><p class="lead">Now that you understand the fundamentals, a few modern CSS features can make larger stylesheets easier to manage and small interactions feel polished.</p></section>
+<section class="article">
+<div class="toc"><strong>On this page</strong><a href="#cascade">The cascade</a><a href="#variables">Custom properties</a><a href="#calc">Calc and clamp</a><a href="#transition">Transitions</a><a href="#transform">Transforms</a><a href="#animation">Animations</a><a href="#habits">Good CSS habits</a></div>
+<h2 id="cascade">The cascade</h2>
+<p>CSS stands for Cascading Style Sheets because multiple rules can apply to the same element. The browser considers things such as origin, importance, cascade layers, specificity and source order when deciding the winning declaration.</p>
+<div class="code"><span class="sel">p</span> { <span class="prop">color</span>: <span class="val">black</span>; }<br><span class="sel">p</span> { <span class="prop">color</span>: <span class="val">darkgreen</span>; }</div>
+<p>When otherwise competing declarations have equal weight and specificity, the later one wins. In practice, aim for predictable selectors rather than fighting the cascade.</p>
+<h2 id="variables">Custom properties</h2>
+<p>Custom properties let you store reusable values, which is particularly handy for colours, spacing and theme choices.</p>
+<div class="code"><span class="sel">:root</span> {<br>  <span class="prop">--brand</span>: <span class="val">#0f7a4b</span>;<br>  <span class="prop">--space</span>: <span class="val">1rem</span>;<br>}<br><br><span class="sel">.button</span> {<br>  <span class="prop">background</span>: <span class="val">var(--brand)</span>;<br>  <span class="prop">padding</span>: <span class="val">var(--space)</span>;<br>}</div>
+<h2 id="calc">Calc, min, max and clamp</h2>
+<div class="code"><span class="sel">.title</span> {<br>  <span class="prop">font-size</span>: <span class="val">clamp(2rem, 5vw, 4rem)</span>;<br>}<br><br><span class="sel">.panel</span> {<br>  <span class="prop">width</span>: <span class="val">calc(100% - 2rem)</span>;<br>}</div>
+<p>These functions let the browser calculate values rather than forcing you to create a separate rule for every possible screen size.</p>
+<h2 id="transition">Transitions</h2>
+<div class="code"><span class="sel">.button</span> {<br>  <span class="prop">transition</span>: <span class="val">background-color .2s ease, transform .2s ease</span>;<br>}<br><span class="sel">.button:hover</span> {<br>  <span class="prop">transform</span>: <span class="val">translateY(-2px)</span>;<br>}</div>
+<h2 id="transform">Transforms</h2>
+<p>Transforms can move, scale, rotate or skew an element without changing the normal flow in the same way that changing layout properties does.</p>
+<h2 id="animation">Animations</h2>
+<div class="code"><span class="sel">@keyframes fade-in</span> {<br>  <span class="val">from</span> { <span class="prop">opacity</span>: <span class="val">0</span>; }<br>  <span class="val">to</span> { <span class="prop">opacity</span>: <span class="val">1</span>; }<br>}<br><br><span class="sel">.panel</span> {<br>  <span class="prop">animation</span>: <span class="val">fade-in .4s ease</span>;<br>}</div>
+<h2 id="habits">Good CSS habits</h2>
+<ul class="checklist">
+<li>Use class names that describe purpose or meaning rather than one-off appearance where practical.</li>
+<li>Keep selectors simple and avoid unnecessary specificity.</li>
+<li>Group related rules so you can find them later.</li>
+<li>Use consistent spacing and naming.</li>
+<li>Prefer layout systems such as Flexbox and Grid over large piles of absolute positioning.</li>
+<li>Check keyboard focus, readable contrast and narrow-screen behaviour as you build.</li>
+</ul>
+<div class="notice"><strong>You do not need to know all of CSS.</strong> Even experienced developers look up properties and browser details. The real skill is knowing which CSS idea solves the problem you have.</div>
+</section>
+</main>
+</div>
+<footer class="footer"><div class="footer-inner">
+<strong>CSSchools</strong> is an independent learning site. The tutorial is original educational material inspired by standard CSS documentation and examples.
+<div class="footer-note">
+Sources and further reading:
+<a href="https://www.w3schools.com/css/" target="_blank" rel="noopener">W3Schools</a>
+<a href="https://developer.mozilla.org/en-GB/docs/Web/CSS" target="_blank" rel="noopener">MDN Web Docs</a>
+<a href="https://www.w3.org/Style/CSS/" target="_blank" rel="noopener">W3C CSS</a>
+</div>
+</div></footer>
+<script src="script.js"></script>
+</body>
+</html>

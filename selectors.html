@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Selectors | CSSchools</title>
+<meta name="description" content="CSSchools: a friendly, practical CSS tutorial for learning how to style HTML pages.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="topbar"><div class="topbar-inner"><span>CSSchools — Learn CSS without the waffle.</span><span>HTML + CSS • Beginner friendly</span></div></div>
+<header class="site-header"><div class="header-inner">
+<a class="brand" href="index.html">CSSchools <span>/ wiki</span></a>
+<nav class="nav" aria-label="Main navigation"><a href="index.html" class="">Home</a><a href="getting-started.html" class="">Getting Started</a><a href="selectors.html" class="active">Selectors</a><a href="styling.html" class="">Styling</a><a href="box-model.html" class="">Box Model</a><a href="layout.html" class="">Layout</a><a href="responsive.html" class="">Responsive</a><a href="advanced.html" class="">Beyond the Basics</a></nav>
+<div class="search"><label class="small" for="site-search">Find on page</label><input id="site-search" type="search" placeholder="Type a topic..."></div>
+</div></header>
+<div class="layout">
+<aside class="sidebar"><h3>Tutorial</h3><a href="index.html" class="">Home</a><a href="getting-started.html" class="">Getting Started</a><a href="selectors.html" class="current">Selectors</a><a href="styling.html" class="">Styling</a><a href="box-model.html" class="">Box Model</a><a href="layout.html" class="">Layout</a><a href="responsive.html" class="">Responsive</a><a href="advanced.html" class="">Beyond the Basics</a><h3 style="margin-top:1rem">Quick links</h3>
+<a href="https://www.w3schools.com/css/" target="_blank" rel="noopener">W3Schools CSS</a>
+<a href="https://developer.mozilla.org/en-GB/docs/Web/CSS" target="_blank" rel="noopener">MDN CSS</a>
+</aside>
+<main class="content">
+<section class="hero"><span class="eyebrow">Chapter 2</span><h1>Selectors and specificity</h1><p class="lead">Selectors are CSS's way of pointing at HTML. The better you understand them, the less mysterious your stylesheet becomes.</p></section>
+<section class="article">
+<div class="toc"><strong>On this page</strong><a href="#basic">Basic selectors</a><a href="#class">Classes and IDs</a><a href="#combined">Combining selectors</a><a href="#pseudo">Pseudo-classes</a><a href="#specificity">Specificity</a><a href="#practice">Practice</a></div>
+<h2 id="basic">Basic selectors</h2>
+<div class="code"><span class="sel">p</span> { <span class="prop">color</span>: <span class="val">#333</span>; }<br><span class="sel">h1</span> { <span class="prop">margin-bottom</span>: <span class="val">1rem</span>; }<br><span class="sel">*</span> { <span class="prop">box-sizing</span>: <span class="val">border-box</span>; }</div>
+<p>The element selector <span class="kbd">p</span> matches paragraphs. The universal selector <span class="kbd">*</span> can match every element.</p>
+<h2 id="class">Classes and IDs</h2>
+<p>A class is normally the main tool for reusable styling.</p>
+<div class="code"><span class="sel">.note</span> {<br>  <span class="prop">background</span>: <span class="val">#e8f5ee</span>;<br>}<br><br><span class="sel">#main-title</span> {<br>  <span class="prop">font-size</span>: <span class="val">3rem</span>;<br>}</div>
+<p>HTML might contain <span class="kbd">&lt;p class="note"&gt;</span> or <span class="kbd">&lt;h1 id="main-title"&gt;</span>. IDs should generally be unique on a page; classes can be reused.</p>
+<h2 id="combined">Combining selectors</h2>
+<div class="code"><span class="sel">article p</span> { <span class="prop">max-width</span>: <span class="val">65ch</span>; }<br><span class="sel">nav &gt; a</span> { <span class="prop">padding</span>: <span class="val">.5rem</span>; }<br><span class="sel">h2, h3</span> { <span class="prop">line-height</span>: <span class="val">1.2</span>; }<br><span class="sel">button:hover</span> { <span class="prop">transform</span>: <span class="val">translateY(-1px)</span>; }</div>
+<table><tr><th>Selector</th><th>Meaning</th></tr>
+<tr><td><span class="kbd">article p</span></td><td>A paragraph anywhere inside an article.</td></tr>
+<tr><td><span class="kbd">article &gt; p</span></td><td>A paragraph that is a direct child of the article.</td></tr>
+<tr><td><span class="kbd">h2, h3</span></td><td>Both headings are selected.</td></tr>
+<tr><td><span class="kbd">button:hover</span></td><td>A button while the pointer is over it.</td></tr></table>
+<h2 id="pseudo">Pseudo-classes</h2>
+<p>Pseudo-classes describe a state or condition rather than a literal element in the HTML. Useful examples include <span class="kbd">:hover</span>, <span class="kbd">:focus</span>, <span class="kbd">:checked</span> and <span class="kbd">:disabled</span>.</p>
+<div class="notice"><strong>Accessibility tip:</strong> Never remove a visible keyboard focus style just to make a design look cleaner. A keyboard user needs to be able to see where focus is.</div>
+<h2 id="specificity">Specificity, in plain English</h2>
+<p>When multiple rules match the same element, the browser needs a way to decide which declaration wins. Specificity is one part of that process. In a rough beginner-friendly order, an ID is more specific than a class, and a class is more specific than an element selector.</p>
+<div class="code"><span class="sel">p</span> { <span class="prop">color</span>: <span class="val">black</span>; }<br><span class="sel">.warning</span> { <span class="prop">color</span>: <span class="val">darkred</span>; }<br><span class="sel">#special</span> { <span class="prop">color</span>: <span class="val">navy</span>; }</div>
+<p>It is usually better to write simple selectors than to keep adding layers of specificity. A tidy stylesheet is easier to change later.</p>
+<h2 id="practice">Practice</h2>
+<p>Make three paragraphs. Give two of them the same class, then create a rule that styles only the paragraph inside a particular section.</p>
+</section>
+</main>
+</div>
+<footer class="footer"><div class="footer-inner">
+<strong>CSSchools</strong> is an independent learning site. The tutorial is original educational material inspired by standard CSS documentation and examples.
+<div class="footer-note">
+Sources and further reading:
+<a href="https://www.w3schools.com/css/" target="_blank" rel="noopener">W3Schools</a>
+<a href="https://developer.mozilla.org/en-GB/docs/Web/CSS" target="_blank" rel="noopener">MDN Web Docs</a>
+<a href="https://www.w3.org/Style/CSS/" target="_blank" rel="noopener">W3C CSS</a>
+</div>
+</div></footer>
+<script src="script.js"></script>
+</body>
+</html>

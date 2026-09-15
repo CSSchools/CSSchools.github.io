@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Responsive | CSSchools</title>
+<meta name="description" content="CSSchools: a friendly, practical CSS tutorial for learning how to style HTML pages.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="topbar"><div class="topbar-inner"><span>CSSchools — Learn CSS without the waffle.</span><span>HTML + CSS • Beginner friendly</span></div></div>
+<header class="site-header"><div class="header-inner">
+<a class="brand" href="index.html">CSSchools <span>/ wiki</span></a>
+<nav class="nav" aria-label="Main navigation"><a href="index.html" class="">Home</a><a href="getting-started.html" class="">Getting Started</a><a href="selectors.html" class="">Selectors</a><a href="styling.html" class="">Styling</a><a href="box-model.html" class="">Box Model</a><a href="layout.html" class="">Layout</a><a href="responsive.html" class="active">Responsive</a><a href="advanced.html" class="">Beyond the Basics</a></nav>
+<div class="search"><label class="small" for="site-search">Find on page</label><input id="site-search" type="search" placeholder="Type a topic..."></div>
+</div></header>
+<div class="layout">
+<aside class="sidebar"><h3>Tutorial</h3><a href="index.html" class="">Home</a><a href="getting-started.html" class="">Getting Started</a><a href="selectors.html" class="">Selectors</a><a href="styling.html" class="">Styling</a><a href="box-model.html" class="">Box Model</a><a href="layout.html" class="">Layout</a><a href="responsive.html" class="current">Responsive</a><a href="advanced.html" class="">Beyond the Basics</a><h3 style="margin-top:1rem">Quick links</h3>
+<a href="https://www.w3schools.com/css/" target="_blank" rel="noopener">W3Schools CSS</a>
+<a href="https://developer.mozilla.org/en-GB/docs/Web/CSS" target="_blank" rel="noopener">MDN CSS</a>
+</aside>
+<main class="content">
+<section class="hero"><span class="eyebrow">Chapter 6</span><h1>Responsive CSS</h1><p class="lead">A responsive page adapts to different screens instead of assuming everybody is using the same monitor.</p></section>
+<section class="article">
+<div class="toc"><strong>On this page</strong><a href="#viewport">Viewport</a><a href="#mobile">Mobile-first</a><a href="#media">Media queries</a><a href="#fluid">Fluid sizing</a><a href="#images">Images</a><a href="#test">Testing</a></div>
+<h2 id="viewport">The viewport</h2>
+<p>For an HTML page to behave properly on mobile devices, use the viewport meta element:</p>
+<div class="code">&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</div>
+<h2 id="mobile">Mobile-first thinking</h2>
+<p>A useful approach is to make a sensible narrow-screen layout first, then add changes for wider screens. This avoids treating mobile as an afterthought.</p>
+<h2 id="media">Media queries</h2>
+<div class="code"><span class="sel">.cards</span> {<br>  <span class="prop">grid-template-columns</span>: <span class="val">1fr</span>;<br>}<br><br><span class="sel">@media (min-width: 800px)</span> {<br>  <span class="sel">.cards</span> {<br>    <span class="prop">grid-template-columns</span>: <span class="val">repeat(3, 1fr)</span>;<br>  }<br>}</div>
+<p>The important idea is not the exact breakpoint. Choose a point where the content starts to look cramped, then change the layout there.</p>
+<h2 id="fluid">Fluid sizing</h2>
+<p>Relative units and functions can help components flex naturally.</p>
+<div class="code"><span class="sel">.content</span> {<br>  <span class="prop">width</span>: <span class="val">min(100% - 2rem, 70rem)</span>;<br>  <span class="prop">margin-inline</span>: <span class="val">auto</span>;<br>}</div>
+<p><span class="kbd">min()</span>, <span class="kbd">max()</span> and <span class="kbd">clamp()</span> can reduce the need for lots of tiny breakpoint changes.</p>
+<h2 id="images">Responsive images</h2>
+<div class="code"><span class="sel">img</span> {<br>  <span class="prop">max-width</span>: <span class="val">100%</span>;<br>  <span class="prop">height</span>: <span class="val">auto</span>;<br>}</div>
+<p>This stops an image from becoming wider than its containing element in the common case.</p>
+<h2 id="test">Testing properly</h2>
+<p>Resize your browser. Test with a narrow window, a medium tablet-like size and a wide desktop. Also test keyboard navigation and zoom. A design that only works at one exact width is not truly responsive.</p>
+<div class="notice"><strong>Practical rule:</strong> Let the content decide the breakpoint. Do not build your entire site around a list of popular phone widths.</div>
+</section>
+</main>
+</div>
+<footer class="footer"><div class="footer-inner">
+<strong>CSSchools</strong> is an independent learning site. The tutorial is original educational material inspired by standard CSS documentation and examples.
+<div class="footer-note">
+Sources and further reading:
+<a href="https://www.w3schools.com/css/" target="_blank" rel="noopener">W3Schools</a>
+<a href="https://developer.mozilla.org/en-GB/docs/Web/CSS" target="_blank" rel="noopener">MDN Web Docs</a>
+<a href="https://www.w3.org/Style/CSS/" target="_blank" rel="noopener">W3C CSS</a>
+</div>
+</div></footer>
+<script src="script.js"></script>
+</body>
+</html>

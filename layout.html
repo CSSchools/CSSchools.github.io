@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Layout | CSSchools</title>
+<meta name="description" content="CSSchools: a friendly, practical CSS tutorial for learning how to style HTML pages.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="topbar"><div class="topbar-inner"><span>CSSchools — Learn CSS without the waffle.</span><span>HTML + CSS • Beginner friendly</span></div></div>
+<header class="site-header"><div class="header-inner">
+<a class="brand" href="index.html">CSSchools <span>/ wiki</span></a>
+<nav class="nav" aria-label="Main navigation"><a href="index.html" class="">Home</a><a href="getting-started.html" class="">Getting Started</a><a href="selectors.html" class="">Selectors</a><a href="styling.html" class="">Styling</a><a href="box-model.html" class="">Box Model</a><a href="layout.html" class="active">Layout</a><a href="responsive.html" class="">Responsive</a><a href="advanced.html" class="">Beyond the Basics</a></nav>
+<div class="search"><label class="small" for="site-search">Find on page</label><input id="site-search" type="search" placeholder="Type a topic..."></div>
+</div></header>
+<div class="layout">
+<aside class="sidebar"><h3>Tutorial</h3><a href="index.html" class="">Home</a><a href="getting-started.html" class="">Getting Started</a><a href="selectors.html" class="">Selectors</a><a href="styling.html" class="">Styling</a><a href="box-model.html" class="">Box Model</a><a href="layout.html" class="current">Layout</a><a href="responsive.html" class="">Responsive</a><a href="advanced.html" class="">Beyond the Basics</a><h3 style="margin-top:1rem">Quick links</h3>
+<a href="https://www.w3schools.com/css/" target="_blank" rel="noopener">W3Schools CSS</a>
+<a href="https://developer.mozilla.org/en-GB/docs/Web/CSS" target="_blank" rel="noopener">MDN CSS</a>
+</aside>
+<main class="content">
+<section class="hero"><span class="eyebrow">Chapter 5</span><h1>Layout: Flexbox, Grid and positioning</h1><p class="lead">Layout is where CSS starts to feel powerful. You are no longer just decorating boxes; you are deciding how those boxes work together.</p></section>
+<section class="article">
+<div class="toc"><strong>On this page</strong><a href="#display">Display</a><a href="#flex">Flexbox</a><a href="#grid">Grid</a><a href="#position">Positioning</a><a href="#zindex">Z-index</a></div>
+<h2 id="display">Start with display</h2>
+<p>For modern layouts, the two most important tools are Flexbox and Grid. Think of Flexbox as a one-dimensional layout system and Grid as a two-dimensional one.</p>
+<h2 id="flex">Flexbox</h2>
+<p>Use Flexbox when you mainly need to arrange items in a row or a column and control alignment and available space.</p>
+<div class="code"><span class="sel">.nav</span> {<br>  <span class="prop">display</span>: <span class="val">flex</span>;<br>  <span class="prop">gap</span>: <span class="val">1rem</span>;<br>  <span class="prop">align-items</span>: <span class="val">center</span>;<br>  <span class="prop">justify-content</span>: <span class="val">space-between</span>;<br>}</div>
+<div class="demo"><h4>Flexbox example</h4><div class="example-flex"><div>Home</div><div>About</div><div>Guides</div><div>Contact</div></div></div>
+<table><tr><th>Property</th><th>What it controls</th></tr>
+<tr><td><span class="kbd">flex-direction</span></td><td>Whether items flow as a row or column.</td></tr>
+<tr><td><span class="kbd">justify-content</span></td><td>Distribution along the main axis.</td></tr>
+<tr><td><span class="kbd">align-items</span></td><td>Alignment along the cross axis.</td></tr>
+<tr><td><span class="kbd">gap</span></td><td>Space between flex items.</td></tr>
+<tr><td><span class="kbd">flex-wrap</span></td><td>Whether items can move onto another line.</td></tr></table>
+<h2 id="grid">CSS Grid</h2>
+<p>Grid is excellent when the page needs rows and columns together, such as card collections, dashboards and broader page structures.</p>
+<div class="code"><span class="sel">.cards</span> {<br>  <span class="prop">display</span>: <span class="val">grid</span>;<br>  <span class="prop">grid-template-columns</span>: <span class="val">repeat(3, 1fr)</span>;<br>  <span class="prop">gap</span>: <span class="val">1rem</span>;<br>}</div>
+<div class="demo"><h4>Grid example</h4><div class="example-grid"><div>One</div><div>Two</div><div>Three</div><div>Four</div><div>Five</div><div>Six</div></div></div>
+<h2 id="position">Positioning</h2>
+<p>Normal flow is the browser's default way of placing elements. Positioning lets you alter that behaviour when you have a clear reason.</p>
+<div class="code"><span class="sel">.badge</span> {<br>  <span class="prop">position</span>: <span class="val">absolute</span>;<br>  <span class="prop">top</span>: <span class="val">1rem</span>;<br>  <span class="prop">right</span>: <span class="val">1rem</span>;<br>}</div>
+<p>Common position values are <span class="kbd">static</span>, <span class="kbd">relative</span>, <span class="kbd">absolute</span>, <span class="kbd">fixed</span> and <span class="kbd">sticky</span>. An absolutely positioned element is normally positioned relative to its nearest positioned ancestor.</p>
+<h2 id="zindex">Z-index</h2>
+<p><span class="kbd">z-index</span> influences which positioned elements appear above others within the relevant stacking context.</p>
+<div class="notice warning"><strong>Do not use positioning as your first layout tool.</strong> If you are trying to build columns, use Grid or Flexbox first. Positioning is better for things such as overlays, badges and sticky interface pieces.</div>
+</section>
+</main>
+</div>
+<footer class="footer"><div class="footer-inner">
+<strong>CSSchools</strong> is an independent learning site. The tutorial is original educational material inspired by standard CSS documentation and examples.
+<div class="footer-note">
+Sources and further reading:
+<a href="https://www.w3schools.com/css/" target="_blank" rel="noopener">W3Schools</a>
+<a href="https://developer.mozilla.org/en-GB/docs/Web/CSS" target="_blank" rel="noopener">MDN Web Docs</a>
+<a href="https://www.w3.org/Style/CSS/" target="_blank" rel="noopener">W3C CSS</a>
+</div>
+</div></footer>
+<script src="script.js"></script>
+</body>
+</html>

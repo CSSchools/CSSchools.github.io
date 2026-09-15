@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | CSSchools</title>
+<meta name="description" content="CSSchools: a friendly, practical CSS tutorial for learning how to style HTML pages.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="topbar"><div class="topbar-inner"><span>CSSchools — Learn CSS without the waffle.</span><span>HTML + CSS • Beginner friendly</span></div></div>
+<header class="site-header"><div class="header-inner">
+<a class="brand" href="index.html">CSSchools <span>/ wiki</span></a>
+<nav class="nav" aria-label="Main navigation"><a href="index.html" class="active">Home</a><a href="getting-started.html" class="">Getting Started</a><a href="selectors.html" class="">Selectors</a><a href="styling.html" class="">Styling</a><a href="box-model.html" class="">Box Model</a><a href="layout.html" class="">Layout</a><a href="responsive.html" class="">Responsive</a><a href="advanced.html" class="">Beyond the Basics</a></nav>
+<div class="search"><label class="small" for="site-search">Find on page</label><input id="site-search" type="search" placeholder="Type a topic..."></div>
+</div></header>
+<div class="layout">
+<aside class="sidebar"><h3>Tutorial</h3><a href="index.html" class="current">Home</a><a href="getting-started.html" class="">Getting Started</a><a href="selectors.html" class="">Selectors</a><a href="styling.html" class="">Styling</a><a href="box-model.html" class="">Box Model</a><a href="layout.html" class="">Layout</a><a href="responsive.html" class="">Responsive</a><a href="advanced.html" class="">Beyond the Basics</a><h3 style="margin-top:1rem">Quick links</h3>
+<a href="https://www.w3schools.com/css/" target="_blank" rel="noopener">W3Schools CSS</a>
+<a href="https://developer.mozilla.org/en-GB/docs/Web/CSS" target="_blank" rel="noopener">MDN CSS</a>
+</aside>
+<main class="content">
+<section class="hero">
+<span class="eyebrow">CSS tutorial</span>
+<h1>Learn CSS, one piece at a time.</h1>
+<p class="lead">CSS is what turns a plain HTML document into something readable, organised and genuinely pleasant to use. This CSSchools guide starts at the beginning and works towards real page layouts.</p>
+<p><a class="badge" href="getting-started.html">Start the tutorial →</a></p>
+</section>
+<section class="article">
+<h2>What you will learn</h2>
+<p>CSSchools is laid out like a small wiki. You can work through the pages in order, or jump straight to the subject you need. The examples use normal HTML and CSS, so you can copy them into a basic project and see what changes.</p>
+<div class="grid-3">
+<a class="card" data-search="getting started syntax comments inline internal external"><h3>1. Getting started</h3><p>Understand CSS syntax, rules, declarations and the three main ways to add CSS.</p></a>
+<a class="card" data-search="selectors classes ids element selectors specificity"><h3>2. Selectors</h3><p>Learn how CSS chooses which HTML elements to style, including classes, IDs and combinations.</p></a>
+<a class="card" data-search="styling colour typography backgrounds borders shadows"><h3>3. Styling</h3><p>Work with colour, text, fonts, backgrounds, borders and simple visual effects.</p></a>
+<a class="card" data-search="box model margin padding border content width height"><h3>4. Box model</h3><p>Get comfortable with content, padding, borders, margins and box-sizing.</p></a>
+<a class="card" data-search="layout display position flexbox grid gap alignment"><h3>5. Layout</h3><p>Build useful page structures with display, Flexbox, Grid and positioning.</p></a>
+<a class="card" data-search="responsive media queries mobile first viewport"><h3>6. Responsive</h3><p>Make your pages work properly on phones, tablets and desktop screens.</p></a>
+<a class="card" data-search="advanced cascade specificity variables custom properties transitions transforms animations"><h3>7. Beyond the basics</h3><p>Move into the cascade, custom properties, transitions, transforms and tidy CSS habits.</p></a>
+</div>
+<h2>How to use the site</h2>
+<p>Do not try to memorise every property. Learn the idea first, then use the examples as patterns. CSS is much easier once you can look at a page and think, “That is a box, so I need to control its size, spacing and layout.”</p>
+<div class="notice"><strong>Tip:</strong> Keep a tiny <span class="kbd">index.html</span> and <span class="kbd">styles.css</span> project open while you learn. Change one value at a time and refresh the page.</div>
+<h2>A tiny CSS example</h2>
+<div class="code"><span class="sel">p</span> {<br>  <span class="prop">color</span>: <span class="val">seagreen</span>;<br>  <span class="prop">font-size</span>: <span class="val">1.1rem</span>;<br>}</div>
+<p>The selector is <strong>p</strong>. The declarations say which properties to change and what values to use. That basic pattern comes up again and again.</p>
+</section>
+</main>
+</div>
+<footer class="footer"><div class="footer-inner">
+<strong>CSSchools</strong> is an independent learning site. The tutorial is original educational material inspired by standard CSS documentation and examples.
+<div class="footer-note">
+Sources and further reading:
+<a href="https://www.w3schools.com/css/" target="_blank" rel="noopener">W3Schools</a>
+<a href="https://developer.mozilla.org/en-GB/docs/Web/CSS" target="_blank" rel="noopener">MDN Web Docs</a>
+<a href="https://www.w3.org/Style/CSS/" target="_blank" rel="noopener">W3C CSS</a>
+</div>
+</div></footer>
+<script src="script.js"></script>
+</body>
+</html>

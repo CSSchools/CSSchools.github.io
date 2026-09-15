@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Box Model | CSSchools</title>
+<meta name="description" content="CSSchools: a friendly, practical CSS tutorial for learning how to style HTML pages.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="topbar"><div class="topbar-inner"><span>CSSchools — Learn CSS without the waffle.</span><span>HTML + CSS • Beginner friendly</span></div></div>
+<header class="site-header"><div class="header-inner">
+<a class="brand" href="index.html">CSSchools <span>/ wiki</span></a>
+<nav class="nav" aria-label="Main navigation"><a href="index.html" class="">Home</a><a href="getting-started.html" class="">Getting Started</a><a href="selectors.html" class="">Selectors</a><a href="styling.html" class="">Styling</a><a href="box-model.html" class="active">Box Model</a><a href="layout.html" class="">Layout</a><a href="responsive.html" class="">Responsive</a><a href="advanced.html" class="">Beyond the Basics</a></nav>
+<div class="search"><label class="small" for="site-search">Find on page</label><input id="site-search" type="search" placeholder="Type a topic..."></div>
+</div></header>
+<div class="layout">
+<aside class="sidebar"><h3>Tutorial</h3><a href="index.html" class="">Home</a><a href="getting-started.html" class="">Getting Started</a><a href="selectors.html" class="">Selectors</a><a href="styling.html" class="">Styling</a><a href="box-model.html" class="current">Box Model</a><a href="layout.html" class="">Layout</a><a href="responsive.html" class="">Responsive</a><a href="advanced.html" class="">Beyond the Basics</a><h3 style="margin-top:1rem">Quick links</h3>
+<a href="https://www.w3schools.com/css/" target="_blank" rel="noopener">W3Schools CSS</a>
+<a href="https://developer.mozilla.org/en-GB/docs/Web/CSS" target="_blank" rel="noopener">MDN CSS</a>
+</aside>
+<main class="content">
+<section class="hero"><span class="eyebrow">Chapter 4</span><h1>The CSS box model</h1><p class="lead">Nearly every visible HTML element can be understood as a box. Once this clicks, spacing stops feeling like guesswork.</p></section>
+<section class="article">
+<div class="toc"><strong>On this page</strong><a href="#parts">The four parts</a><a href="#size">Width and height</a><a href="#spacing">Margin and padding</a><a href="#sizing">Box sizing</a><a href="#display">Display</a><a href="#practice">Practice</a></div>
+<h2 id="parts">The four parts</h2>
+<p>The classic box model has four layers:</p>
+<table><tr><th>Part</th><th>What it means</th></tr>
+<tr><td>Content</td><td>The actual text, image or child content.</td></tr>
+<tr><td>Padding</td><td>Space between the content and the border.</td></tr>
+<tr><td>Border</td><td>The visible edge surrounding the padding and content.</td></tr>
+<tr><td>Margin</td><td>Space outside the border, separating this box from others.</td></tr></table>
+<div class="demo"><div class="example-box"><strong>Content</strong><br>Padding sits around this area.<br>Border surrounds the padding.<br>Margin sits outside the border.</div></div>
+<h2 id="size">Width and height</h2>
+<div class="code"><span class="sel">.card</span> {<br>  <span class="prop">width</span>: <span class="val">320px</span>;<br>  <span class="prop">min-height</span>: <span class="val">180px</span>;<br>}</div>
+<p>Setting a fixed width can be fine for a small component, but overly rigid widths can cause problems on narrow screens. <span class="kbd">max-width</span> is often useful for keeping content readable without making it too wide.</p>
+<h2 id="spacing">Margin and padding</h2>
+<div class="code"><span class="sel">.box</span> {<br>  <span class="prop">padding</span>: <span class="val">1rem</span>;<br>  <span class="prop">margin</span>: <span class="val">0 auto 2rem</span>;<br>}</div>
+<p>The shorthand can contain one to four values. With four values, the order is top, right, bottom, left.</p>
+<div class="code"><span class="prop">padding</span>: <span class="val">10px 20px 30px 40px</span>;</div>
+<h2 id="sizing">Box sizing</h2>
+<p>By default, declared width and height describe the content box. With <span class="kbd">border-box</span>, the declared size includes padding and border. Many modern stylesheets apply it globally because it makes sizing more predictable.</p>
+<div class="code"><span class="sel">*, *::before, *::after</span> {<br>  <span class="prop">box-sizing</span>: <span class="val">border-box</span>;<br>}</div>
+<h2 id="display">Display values</h2>
+<table><tr><th>Value</th><th>Basic idea</th></tr>
+<tr><td><span class="kbd">block</span></td><td>Starts on a new line and normally takes available inline space.</td></tr>
+<tr><td><span class="kbd">inline</span></td><td>Flows with text and does not behave like a full-width block.</td></tr>
+<tr><td><span class="kbd">inline-block</span></td><td>Flows inline but allows useful box dimensions.</td></tr>
+<tr><td><span class="kbd">none</span></td><td>Removes the element from the normal layout.</td></tr>
+</table>
+<h2 id="practice">Practice</h2>
+<p>Create two boxes with the same width. Give one generous padding and the other generous margin. Notice how padding changes the space inside the border, while margin changes the space outside it.</p>
+</section>
+</main>
+</div>
+<footer class="footer"><div class="footer-inner">
+<strong>CSSchools</strong> is an independent learning site. The tutorial is original educational material inspired by standard CSS documentation and examples.
+<div class="footer-note">
+Sources and further reading:
+<a href="https://www.w3schools.com/css/" target="_blank" rel="noopener">W3Schools</a>
+<a href="https://developer.mozilla.org/en-GB/docs/Web/CSS" target="_blank" rel="noopener">MDN Web Docs</a>
+<a href="https://www.w3.org/Style/CSS/" target="_blank" rel="noopener">W3C CSS</a>
+</div>
+</div></footer>
+<script src="script.js"></script>
+</body>
+</html>

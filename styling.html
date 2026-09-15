@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Styling | CSSchools</title>
+<meta name="description" content="CSSchools: a friendly, practical CSS tutorial for learning how to style HTML pages.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="topbar"><div class="topbar-inner"><span>CSSchools — Learn CSS without the waffle.</span><span>HTML + CSS • Beginner friendly</span></div></div>
+<header class="site-header"><div class="header-inner">
+<a class="brand" href="index.html">CSSchools <span>/ wiki</span></a>
+<nav class="nav" aria-label="Main navigation"><a href="index.html" class="">Home</a><a href="getting-started.html" class="">Getting Started</a><a href="selectors.html" class="">Selectors</a><a href="styling.html" class="active">Styling</a><a href="box-model.html" class="">Box Model</a><a href="layout.html" class="">Layout</a><a href="responsive.html" class="">Responsive</a><a href="advanced.html" class="">Beyond the Basics</a></nav>
+<div class="search"><label class="small" for="site-search">Find on page</label><input id="site-search" type="search" placeholder="Type a topic..."></div>
+</div></header>
+<div class="layout">
+<aside class="sidebar"><h3>Tutorial</h3><a href="index.html" class="">Home</a><a href="getting-started.html" class="">Getting Started</a><a href="selectors.html" class="">Selectors</a><a href="styling.html" class="current">Styling</a><a href="box-model.html" class="">Box Model</a><a href="layout.html" class="">Layout</a><a href="responsive.html" class="">Responsive</a><a href="advanced.html" class="">Beyond the Basics</a><h3 style="margin-top:1rem">Quick links</h3>
+<a href="https://www.w3schools.com/css/" target="_blank" rel="noopener">W3Schools CSS</a>
+<a href="https://developer.mozilla.org/en-GB/docs/Web/CSS" target="_blank" rel="noopener">MDN CSS</a>
+</aside>
+<main class="content">
+<section class="hero"><span class="eyebrow">Chapter 3</span><h1>Colour, text and visual styling</h1><p class="lead">Once you can target the right elements, CSS becomes a toolbox for typography, colour, borders and backgrounds.</p></section>
+<section class="article">
+<div class="toc"><strong>On this page</strong><a href="#colour">Colour</a><a href="#text">Text</a><a href="#fonts">Fonts</a><a href="#backgrounds">Backgrounds</a><a href="#borders">Borders and radius</a><a href="#effects">Shadows and effects</a></div>
+<h2 id="colour">Colour</h2>
+<p>CSS colours can be written in several formats. Named colours are easy to read, hexadecimal values are common, and <span class="kbd">rgb()</span> and <span class="kbd">hsl()</span> can be useful when you want more control.</p>
+<div class="code"><span class="sel">.title</span> {<br>  <span class="prop">color</span>: <span class="val">#0f7a4b</span>;<br>}<br><br><span class="sel">.subtle</span> {<br>  <span class="prop">color</span>: <span class="val">rgb(80 95 88)</span>;<br>}</div>
+<h2 id="text">Text properties</h2>
+<div class="code"><span class="sel">p</span> {<br>  <span class="prop">font-size</span>: <span class="val">1rem</span>;<br>  <span class="prop">line-height</span>: <span class="val">1.7</span>;<br>  <span class="prop">text-align</span>: <span class="val">left</span>;<br>  <span class="prop">letter-spacing</span>: <span class="val">.01em</span>;<br>}</div>
+<p><strong>Line-height</strong> is especially important for reading. A little extra space between lines can make a block of text far easier to follow.</p>
+<div class="demo"><h4>Live-looking example</h4><p style="font-size:1.15rem;line-height:1.8;letter-spacing:.01em;margin:0">Good typography does not need to shout. It simply makes the content easier to read.</p></div>
+<h2 id="fonts">Fonts and font stacks</h2>
+<p>You can ask for a preferred font followed by fallbacks. The browser uses the first available option.</p>
+<div class="code"><span class="sel">body</span> {<br>  <span class="prop">font-family</span>: <span class="val">Arial, Helvetica, sans-serif</span>;<br>}</div>
+<p>For a small site, a simple system font stack is often enough. For more polished branding, web fonts can be loaded separately.</p>
+<h2 id="backgrounds">Backgrounds</h2>
+<div class="code"><span class="sel">.panel</span> {<br>  <span class="prop">background-color</span>: <span class="val">#e8f5ee</span>;<br>  <span class="prop">background-image</span>: <span class="val">url("pattern.png")</span>;<br>  <span class="prop">background-size</span>: <span class="val">cover</span>;<br>}</div>
+<p>A background image is decorative in many cases, so avoid using it as the only way to communicate important information.</p>
+<h2 id="borders">Borders and rounded corners</h2>
+<div class="code"><span class="sel">.card</span> {<br>  <span class="prop">border</span>: <span class="val">1px solid #dbe4df</span>;<br>  <span class="prop">border-radius</span>: <span class="val">12px</span>;<br>}</div>
+<h2 id="effects">Shadows and effects</h2>
+<div class="code"><span class="sel">.card:hover</span> {<br>  <span class="prop">box-shadow</span>: <span class="val">0 8px 24px rgb(0 0 0 / .08)</span>;<br>  <span class="prop">transform</span>: <span class="val">translateY(-2px)</span>;<br>}</div>
+<div class="notice warning"><strong>Good habit:</strong> Visual effects should support the content. A page does not become better just because every card has a giant shadow.</div>
+</section>
+</main>
+</div>
+<footer class="footer"><div class="footer-inner">
+<strong>CSSchools</strong> is an independent learning site. The tutorial is original educational material inspired by standard CSS documentation and examples.
+<div class="footer-note">
+Sources and further reading:
+<a href="https://www.w3schools.com/css/" target="_blank" rel="noopener">W3Schools</a>
+<a href="https://developer.mozilla.org/en-GB/docs/Web/CSS" target="_blank" rel="noopener">MDN Web Docs</a>
+<a href="https://www.w3.org/Style/CSS/" target="_blank" rel="noopener">W3C CSS</a>
+</div>
+</div></footer>
+<script src="script.js"></script>
+</body>
+</html>
